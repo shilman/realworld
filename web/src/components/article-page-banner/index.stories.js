@@ -1,3 +1,4 @@
+import { fn } from '@storybook/test';
 import { ArticlePageBanner } from '.';
 import { buildAuthorizationResult } from '../../utils/storybook';
 
@@ -9,6 +10,11 @@ const meta = {
     },
     createdAt: new Date(2000, 2, 1).toISOString(),
     slug: 'some-cool-title',
+    onDelete: fn(),
+    onFavorite: fn(),
+    onFollow: fn(),
+    onUnfavorite: fn(),
+    onUnfollow: fn(),
   },
   argTypes: {
     onDelete: { action: true },

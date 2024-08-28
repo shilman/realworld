@@ -1,4 +1,4 @@
-import { userEvent, expect, within } from '@storybook/test';
+import { userEvent, expect, within, fn } from '@storybook/test';
 import { ArticleMeta } from '.';
 import { buildAuthorizationResult } from '../../utils/storybook';
 
@@ -19,6 +19,11 @@ const meta = {
     favoritesCount: 0,
     slug: 'a-simple-title',
     viewerDidFavorite: false,
+    onDelete: fn(),
+    onFavorite: fn(),
+    onFollow: fn(),
+    onUnfavorite: fn(),
+    onUnfollow: fn(),
   },
   argTypes: {
     onDelete: { action: true },

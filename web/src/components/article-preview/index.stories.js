@@ -1,3 +1,4 @@
+import { fn } from '@storybook/test';
 import { ArticlePreview } from '.';
 import { buildAuthorizationResult } from '../../utils/storybook';
 
@@ -13,6 +14,8 @@ const meta = {
     favoritesCount: 0,
     slug: 'some-cool-title',
     viewerDidFavorite: false,
+    onFavorite: fn(),
+    onUnfavorite: fn(),
   },
   argTypes: {
     onFavorite: { action: true },

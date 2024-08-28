@@ -1,3 +1,4 @@
+import { fn } from '@storybook/test';
 import { CommentCard } from '.';
 import { buildAuthorizationResult } from '../../utils/storybook';
 
@@ -8,6 +9,7 @@ const meta = {
     body: 'Hello world!',
     createdAt: new Date(200, 2, 1).toISOString(),
     id: '1',
+    onDelete: fn(),
   },
   argTypes: {
     onDelete: { action: true },

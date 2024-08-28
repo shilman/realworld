@@ -1,9 +1,12 @@
-import { fireEvent, userEvent, expect, within } from '@storybook/test';
+import { fireEvent, userEvent, expect, within, fn } from '@storybook/test';
 import { ArticleForm } from '.';
 import { TagsInput } from '../../containers/tags-input';
 
 const meta = {
   component: ArticleForm,
+  args: {
+    onSubmit: fn(),
+  },
   argTypes: {
     onSubmit: { action: true },
   },
